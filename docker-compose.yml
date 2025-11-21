@@ -1,0 +1,9 @@
+services:
+  frontend:
+    build: .
+    container_name: todo_frontend
+    ports:
+      - '3001:3000'
+    environment:
+      NODE_ENV: production
+      NEXT_PUBLIC_GRAPHQL_ENDPOINT: 'http://localhost:3000/graphql'
